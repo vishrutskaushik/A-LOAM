@@ -2,6 +2,10 @@
     
     <param name="scan_line" type="int" value="64" />
 
+    <node pkg="rosbag" type="play" name="rosbag_play" args="--clock /home/vishrut/ros_workspaces/datasets/kitti_dataset/Rosbags/kitti_2011_09_30_drive_0027_synced_imu_velo.bag"> 
+        <remap from="/kitti/velo/pointcloud" to="/velodyne_points"/>
+    </node>
+
     <!-- if 1, do mapping 10 Hz, if 2, do mapping 5 Hz. Suggest to use 1, it will adjust frequence automaticlly -->
     <param name="mapping_skip_frame" type="int" value="1" />
 
